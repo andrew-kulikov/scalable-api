@@ -1,0 +1,18 @@
+version: "3"
+services: 
+    instanse1:
+        container_name: scalable_instanse1
+        image: single
+        build: 
+            context: ../SingleInstance
+        expose: [80]
+        ports: 
+            - "8080:80"
+    instanse2:
+        container_name: scalable_instanse2
+        image: single
+        build: 
+            context: ../SingleInstance
+        expose: [80]
+        ports: 
+            - "8081:80"
